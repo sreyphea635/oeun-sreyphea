@@ -10,10 +10,28 @@ body {
   text-align: center;
 }
 
+/* .banner img {
+  width: 100%;
+  height: auto;
+} */
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .banner img {
   width: 100%;
   height: auto;
+  animation: slideUp 2.5s ease-out;
 }
+
 
 .banner .overlay {
   position: absolute;
@@ -39,7 +57,28 @@ body {
   color: wheat;
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
+
+.timeless span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .timeless1 {
   background-color: #333;
   padding: 15px;
